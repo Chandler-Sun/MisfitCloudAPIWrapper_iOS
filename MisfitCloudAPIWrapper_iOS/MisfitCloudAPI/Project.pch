@@ -1,0 +1,91 @@
+//
+//  Project.pch
+//  MisfitCloudAPIWrapper_iOS
+//
+//  Created by ASeign on 8/25/15.
+//  Copyright (c) 2015 Misfit. All rights reserved.
+//
+
+#ifndef MisfitCloudAPIWrapper_iOS_Project_pch
+#define MisfitCloudAPIWrapper_iOS_Project_pch
+
+#ifndef TARGET_OS_IOS
+#define TARGET_OS_IOS TARGET_OS_IPHONE
+#endif
+
+#ifndef TARGET_OS_WATCH
+#define TARGET_OS_WATCH 0
+#endif
+
+
+#define MFS_NULL_WRAPPER(value)     ((value) ? (value) : @"NULL")
+
+#define MFCLocalizedString(content, comment) NSLocalizedString(content, comment)
+
+#if DEBUG
+
+#define MFSLog(content, ... )            NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+#define MFSLogNetwork(content, ... )     NSLog( @"#NETWORK: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+#define MFSLogDebug(content, ... )       NSLog( @"#DEBUG: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+#define MFSLogInfo(content, ... )        NSLog( @"#INFO: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+#define MFSLogError(content,...)         NSLog( @"#ERROR: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+
+#else
+
+#define MFSLog(content, ... )            do{}while(0)
+#define MFSLogNetwork(content, ... )     do{}while(0)
+#define MFSLogDebug(content, ... )       do{}while(0)
+#define MFSLogInfo(content, ... )        NSLog( @"#INFO: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__] )
+#define MFSLogError(content, ... )       NSLog( @"#ERROR: <%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(content), ##__VA_ARGS__])
+
+#endif
+
+#endif
+
+// --------------- Assert -----------------
+
+#define MFSAssertIMP(condition, format, ...) \
+if(!(condition)) { \
+MFSLogError(@"%@\n%@", [NSString stringWithFormat:(format), ##__VA_ARGS__], [NSThread callStackSymbols]); \
+abort(); \
+}
+
+#define MFSAssertLog(condition, format, ...) \
+if(!(condition)) { \
+MFSLogError(@"%@\n%@", [NSString stringWithFormat:(format), ##__VA_ARGS__], [NSThread callStackSymbols]); \
+}
+
+#define MFSAssertLogExit(condition, format, ...) \
+if(!(condition)) { \
+MFSLogError(@"%@\n%@", [NSString stringWithFormat:(format), ##__VA_ARGS__], [NSThread callStackSymbols]); \
+return; \
+}
+
+#define MFSAssertLogExitValue(returnValue, condition, format, ...) \
+if(!(condition)) { \
+MFSLogError(@"%@\n%@", [NSString stringWithFormat:(format), ##__VA_ARGS__], [NSThread callStackSymbols]); \
+return (returnValue); \
+}
+
+// DEBUG MODE
+#if (MFS_ASSERTION == 2)
+
+#define MFSAssert(condition, format, ...)      MFSAssertLog(condition, format, ##__VA_ARGS__)
+#define MFSAssertExit(condition, format, ...)  MFSAssertLogExit(condition, format, ##__VA_ARGS__)
+#define MFSAssertExitValue(returnValue, condition, format, ...)     MFSAssertLogExitValue(returnValue, condition, format, ##__VA_ARGS__)
+
+// STAGING MODE
+#elif (MFS_ASSERTION == 1)
+
+#define MFSAssert(condition, format, ...)      MFSAssertLog(condition, format, ##__VA_ARGS__)
+#define MFSAssertExit(condition, format, ...)  MFSAssertLogExit(condition, format, ##__VA_ARGS__)
+#define MFSAssertExitValue(returnValue, condition, format, ...)     MFSAssertLogExitValue(returnValue, condition, format, ##__VA_ARGS__)
+
+// PRODUCTION MODE
+#else
+
+#define MFSAssert(condition, format, ...)           MFSAssertLog(condition, format, ##__VA_ARGS__)
+#define MFSAssertExit(condition, format, ...)       MFSAssertLogExit(condition, format, ##__VA_ARGS__)
+#define MFSAssertExitValue(returnValue, condition, format, ...)  MFSAssertLogExitValue(returnValue, condition, format, ##__VA_ARGS__)
+
+#endif

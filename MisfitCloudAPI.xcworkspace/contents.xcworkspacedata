@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MisfitCloudAPIWrapperDemo_iOS/MisfitCloudAPIWrapperDemo_iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MisfitCloudAPIWrapper_iOS/MisfitCloudAPIWrapper_iOS.xcodeproj">
+   </FileRef>
+</Workspace>

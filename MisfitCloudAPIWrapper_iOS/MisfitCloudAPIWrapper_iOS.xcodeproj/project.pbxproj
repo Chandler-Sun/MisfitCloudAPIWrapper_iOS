@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C17D41D1B8B890900E30C27 /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C17D4121B8B890800E30C27 /* libMisfitCloudAPI.a */; };
+		2C17D4391B8B899600E30C27 /* MFCSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4291B8B899600E30C27 /* MFCSession.m */; };
+		2C17D43A1B8B899600E30C27 /* MFCError.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D42E1B8B899600E30C27 /* MFCError.m */; };
+		2C17D43B1B8B899600E30C27 /* NSData+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4331B8B899600E30C27 /* NSData+HexString.m */; };
+		2C17D43C1B8B899600E30C27 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4351B8B899600E30C27 /* NSString+MD5.m */; };
+		2C17D43D1B8B899600E30C27 /* NSURL+QueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4371B8B899600E30C27 /* NSURL+QueryItem.m */; };
+		2C17D4491B8C433000E30C27 /* MFCError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42D1B8B899600E30C27 /* MFCError.h */; };
+		2C17D44A1B8C433000E30C27 /* MFCSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42B1B8B899600E30C27 /* MFCSession.h */; };
+		2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42F1B8B899600E30C27 /* MisfitCloudAPI.h */; };
+		2C17D45F1B8C44DF00E30C27 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D44D1B8C44DF00E30C27 /* AFHTTPRequestOperation.m */; };
+		2C17D4601B8C44DF00E30C27 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D44F1B8C44DF00E30C27 /* AFHTTPRequestOperationManager.m */; };
+		2C17D4611B8C44DF00E30C27 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4511B8C44DF00E30C27 /* AFHTTPSessionManager.m */; };
+		2C17D4621B8C44DF00E30C27 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4541B8C44DF00E30C27 /* AFNetworkReachabilityManager.m */; };
+		2C17D4631B8C44DF00E30C27 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4561B8C44DF00E30C27 /* AFSecurityPolicy.m */; };
+		2C17D4641B8C44DF00E30C27 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4581B8C44DF00E30C27 /* AFURLConnectionOperation.m */; };
+		2C17D4651B8C44DF00E30C27 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D45A1B8C44DF00E30C27 /* AFURLRequestSerialization.m */; };
+		2C17D4661B8C44DF00E30C27 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D45C1B8C44DF00E30C27 /* AFURLResponseSerialization.m */; };
+		2C17D4671B8C44DF00E30C27 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D45E1B8C44DF00E30C27 /* AFURLSessionManager.m */; };
+		2C17D46C1B8C45A600E30C27 /* MFCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D46B1B8C45A600E30C27 /* MFCAPIClient.m */; };
+		2C17D4721B8C4A1400E30C27 /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4701B8C4A1400E30C27 /* AFNetworkActivityLogger.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C17D41E1B8B890900E30C27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C837B071B79E4BC007C579A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C17D4111B8B890800E30C27;
+			remoteInfo = MisfitCloudAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C17D4101B8B890800E30C27 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2C17D4491B8C433000E30C27 /* MFCError.h in CopyFiles */,
+				2C17D44A1B8C433000E30C27 /* MFCSession.h in CopyFiles */,
+				2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2C17D4121B8B890800E30C27 /* libMisfitCloudAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMisfitCloudAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C17D41C1B8B890800E30C27 /* MisfitCloudAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MisfitCloudAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C17D4221B8B890900E30C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C17D4291B8B899600E30C27 /* MFCSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCSession.m; sourceTree = "<group>"; };
+		2C17D42A1B8B899600E30C27 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C17D42B1B8B899600E30C27 /* MFCSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCSession.h; sourceTree = "<group>"; };
+		2C17D42D1B8B899600E30C27 /* MFCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCError.h; sourceTree = "<group>"; };
+		2C17D42E1B8B899600E30C27 /* MFCError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCError.m; sourceTree = "<group>"; };
+		2C17D42F1B8B899600E30C27 /* MisfitCloudAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisfitCloudAPI.h; sourceTree = "<group>"; };
+		2C17D4321B8B899600E30C27 /* NSData+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+HexString.h"; sourceTree = "<group>"; };
+		2C17D4331B8B899600E30C27 /* NSData+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+HexString.m"; sourceTree = "<group>"; };
+		2C17D4341B8B899600E30C27 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		2C17D4351B8B899600E30C27 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		2C17D4361B8B899600E30C27 /* NSURL+QueryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryItem.h"; sourceTree = "<group>"; };
+		2C17D4371B8B899600E30C27 /* NSURL+QueryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryItem.m"; sourceTree = "<group>"; };
+		2C17D44C1B8C44DF00E30C27 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		2C17D44D1B8C44DF00E30C27 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		2C17D44E1B8C44DF00E30C27 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		2C17D44F1B8C44DF00E30C27 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		2C17D4501B8C44DF00E30C27 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		2C17D4511B8C44DF00E30C27 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		2C17D4521B8C44DF00E30C27 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		2C17D4531B8C44DF00E30C27 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		2C17D4541B8C44DF00E30C27 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		2C17D4551B8C44DF00E30C27 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		2C17D4561B8C44DF00E30C27 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		2C17D4571B8C44DF00E30C27 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		2C17D4581B8C44DF00E30C27 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		2C17D4591B8C44DF00E30C27 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		2C17D45A1B8C44DF00E30C27 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		2C17D45B1B8C44DF00E30C27 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		2C17D45C1B8C44DF00E30C27 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		2C17D45D1B8C44DF00E30C27 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		2C17D45E1B8C44DF00E30C27 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		2C17D46A1B8C45A600E30C27 /* MFCAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFCAPIClient.h; path = Network/MFCAPIClient.h; sourceTree = "<group>"; };
+		2C17D46B1B8C45A600E30C27 /* MFCAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFCAPIClient.m; path = Network/MFCAPIClient.m; sourceTree = "<group>"; };
+		2C17D4701B8C4A1400E30C27 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
+		2C17D4711B8C4A1400E30C27 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
+		2C17D4731B8C4FA200E30C27 /* Project.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C17D40F1B8B890800E30C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C17D4191B8B890800E30C27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C17D41D1B8B890900E30C27 /* libMisfitCloudAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C17D4131B8B890800E30C27 /* MisfitCloudAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4691B8C44FC00E30C27 /* Network */,
+				2C17D4681B8C44E700E30C27 /* 3rdparty */,
+				2C17D43E1B8B89B200E30C27 /* Supporting Files */,
+				2C17D4301B8B899600E30C27 /* Common */,
+				2C17D42C1B8B899600E30C27 /* Errors */,
+				2C17D42B1B8B899600E30C27 /* MFCSession.h */,
+				2C17D4291B8B899600E30C27 /* MFCSession.m */,
+				2C17D42F1B8B899600E30C27 /* MisfitCloudAPI.h */,
+			);
+			path = MisfitCloudAPI;
+			sourceTree = "<group>";
+		};
+		2C17D4201B8B890900E30C27 /* MisfitCloudAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4211B8B890900E30C27 /* Supporting Files */,
+			);
+			path = MisfitCloudAPITests;
+			sourceTree = "<group>";
+		};
+		2C17D4211B8B890900E30C27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4221B8B890900E30C27 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C17D42C1B8B899600E30C27 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D42D1B8B899600E30C27 /* MFCError.h */,
+				2C17D42E1B8B899600E30C27 /* MFCError.m */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		2C17D4301B8B899600E30C27 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4311B8B899600E30C27 /* Categories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2C17D4311B8B899600E30C27 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4321B8B899600E30C27 /* NSData+HexString.h */,
+				2C17D4331B8B899600E30C27 /* NSData+HexString.m */,
+				2C17D4341B8B899600E30C27 /* NSString+MD5.h */,
+				2C17D4351B8B899600E30C27 /* NSString+MD5.m */,
+				2C17D4361B8B899600E30C27 /* NSURL+QueryItem.h */,
+				2C17D4371B8B899600E30C27 /* NSURL+QueryItem.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2C17D43E1B8B89B200E30C27 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D42A1B8B899600E30C27 /* Info.plist */,
+				2C17D4731B8C4FA200E30C27 /* Project.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C17D43F1B8B8B1600E30C27 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4701B8C4A1400E30C27 /* AFNetworkActivityLogger.m */,
+				2C17D4711B8C4A1400E30C27 /* AFNetworkActivityLogger.h */,
+				2C17D44C1B8C44DF00E30C27 /* AFHTTPRequestOperation.h */,
+				2C17D44D1B8C44DF00E30C27 /* AFHTTPRequestOperation.m */,
+				2C17D44E1B8C44DF00E30C27 /* AFHTTPRequestOperationManager.h */,
+				2C17D44F1B8C44DF00E30C27 /* AFHTTPRequestOperationManager.m */,
+				2C17D4501B8C44DF00E30C27 /* AFHTTPSessionManager.h */,
+				2C17D4511B8C44DF00E30C27 /* AFHTTPSessionManager.m */,
+				2C17D4521B8C44DF00E30C27 /* AFNetworking.h */,
+				2C17D4531B8C44DF00E30C27 /* AFNetworkReachabilityManager.h */,
+				2C17D4541B8C44DF00E30C27 /* AFNetworkReachabilityManager.m */,
+				2C17D4551B8C44DF00E30C27 /* AFSecurityPolicy.h */,
+				2C17D4561B8C44DF00E30C27 /* AFSecurityPolicy.m */,
+				2C17D4571B8C44DF00E30C27 /* AFURLConnectionOperation.h */,
+				2C17D4581B8C44DF00E30C27 /* AFURLConnectionOperation.m */,
+				2C17D4591B8C44DF00E30C27 /* AFURLRequestSerialization.h */,
+				2C17D45A1B8C44DF00E30C27 /* AFURLRequestSerialization.m */,
+				2C17D45B1B8C44DF00E30C27 /* AFURLResponseSerialization.h */,
+				2C17D45C1B8C44DF00E30C27 /* AFURLResponseSerialization.m */,
+				2C17D45D1B8C44DF00E30C27 /* AFURLSessionManager.h */,
+				2C17D45E1B8C44DF00E30C27 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		2C17D4681B8C44E700E30C27 /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D43F1B8B8B1600E30C27 /* AFNetworking */,
+			);
+			name = 3rdparty;
+			sourceTree = "<group>";
+		};
+		2C17D4691B8C44FC00E30C27 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D46A1B8C45A600E30C27 /* MFCAPIClient.h */,
+				2C17D46B1B8C45A600E30C27 /* MFCAPIClient.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		2C837B061B79E4BC007C579A = {
+			isa = PBXGroup;
+			children = (
+				2C17D4131B8B890800E30C27 /* MisfitCloudAPI */,
+				2C17D4201B8B890900E30C27 /* MisfitCloudAPITests */,
+				2C837B111B79E4BC007C579A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C837B111B79E4BC007C579A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4121B8B890800E30C27 /* libMisfitCloudAPI.a */,
+				2C17D41C1B8B890800E30C27 /* MisfitCloudAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C17D4111B8B890800E30C27 /* MisfitCloudAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C17D4231B8B890900E30C27 /* Build configuration list for PBXNativeTarget "MisfitCloudAPI" */;
+			buildPhases = (
+				2C17D40E1B8B890800E30C27 /* Sources */,
+				2C17D40F1B8B890800E30C27 /* Frameworks */,
+				2C17D4101B8B890800E30C27 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisfitCloudAPI;
+			productName = MisfitCloudAPI;
+			productReference = 2C17D4121B8B890800E30C27 /* libMisfitCloudAPI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2C17D41B1B8B890800E30C27 /* MisfitCloudAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C17D4261B8B890900E30C27 /* Build configuration list for PBXNativeTarget "MisfitCloudAPITests" */;
+			buildPhases = (
+				2C17D4181B8B890800E30C27 /* Sources */,
+				2C17D4191B8B890800E30C27 /* Frameworks */,
+				2C17D41A1B8B890800E30C27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C17D41F1B8B890900E30C27 /* PBXTargetDependency */,
+			);
+			name = MisfitCloudAPITests;
+			productName = MisfitCloudAPITests;
+			productReference = 2C17D41C1B8B890800E30C27 /* MisfitCloudAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C837B071B79E4BC007C579A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Misfit;
+				TargetAttributes = {
+					2C17D4111B8B890800E30C27 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					2C17D41B1B8B890800E30C27 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 2C837B0A1B79E4BC007C579A /* Build configuration list for PBXProject "MisfitCloudAPIWrapper_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C837B061B79E4BC007C579A;
+			productRefGroup = 2C837B111B79E4BC007C579A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C17D4111B8B890800E30C27 /* MisfitCloudAPI */,
+				2C17D41B1B8B890800E30C27 /* MisfitCloudAPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C17D41A1B8B890800E30C27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C17D40E1B8B890800E30C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C17D4721B8C4A1400E30C27 /* AFNetworkActivityLogger.m in Sources */,
+				2C17D4641B8C44DF00E30C27 /* AFURLConnectionOperation.m in Sources */,
+				2C17D45F1B8C44DF00E30C27 /* AFHTTPRequestOperation.m in Sources */,
+				2C17D4621B8C44DF00E30C27 /* AFNetworkReachabilityManager.m in Sources */,
+				2C17D4671B8C44DF00E30C27 /* AFURLSessionManager.m in Sources */,
+				2C17D4651B8C44DF00E30C27 /* AFURLRequestSerialization.m in Sources */,
+				2C17D4391B8B899600E30C27 /* MFCSession.m in Sources */,
+				2C17D46C1B8C45A600E30C27 /* MFCAPIClient.m in Sources */,
+				2C17D4661B8C44DF00E30C27 /* AFURLResponseSerialization.m in Sources */,
+				2C17D43B1B8B899600E30C27 /* NSData+HexString.m in Sources */,
+				2C17D43C1B8B899600E30C27 /* NSString+MD5.m in Sources */,
+				2C17D4601B8C44DF00E30C27 /* AFHTTPRequestOperationManager.m in Sources */,
+				2C17D4631B8C44DF00E30C27 /* AFSecurityPolicy.m in Sources */,
+				2C17D43D1B8B899600E30C27 /* NSURL+QueryItem.m in Sources */,
+				2C17D43A1B8B899600E30C27 /* MFCError.m in Sources */,
+				2C17D4611B8C44DF00E30C27 /* AFHTTPSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C17D4181B8B890800E30C27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C17D41F1B8B890900E30C27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C17D4111B8B890800E30C27 /* MisfitCloudAPI */;
+			targetProxy = 2C17D41E1B8B890900E30C27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2C17D4241B8B890900E30C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
+				GCC_PREFIX_HEADER = MisfitCloudAPI/Project.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Debug;
+		};
+		2C17D4251B8B890900E30C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+					i386,
+				);
+				GCC_PREFIX_HEADER = MisfitCloudAPI/Project.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
+			};
+			name = Release;
+		};
+		2C17D4271B8B890900E30C27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MisfitCloudAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C17D4281B8B890900E30C27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MisfitCloudAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C837B241B79E4BD007C579A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C837B251B79E4BD007C579A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C17D4231B8B890900E30C27 /* Build configuration list for PBXNativeTarget "MisfitCloudAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C17D4241B8B890900E30C27 /* Debug */,
+				2C17D4251B8B890900E30C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C17D4261B8B890900E30C27 /* Build configuration list for PBXNativeTarget "MisfitCloudAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C17D4271B8B890900E30C27 /* Debug */,
+				2C17D4281B8B890900E30C27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C837B0A1B79E4BC007C579A /* Build configuration list for PBXProject "MisfitCloudAPIWrapper_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C837B241B79E4BD007C579A /* Debug */,
+				2C837B251B79E4BD007C579A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C837B071B79E4BC007C579A /* Project object */;
+}

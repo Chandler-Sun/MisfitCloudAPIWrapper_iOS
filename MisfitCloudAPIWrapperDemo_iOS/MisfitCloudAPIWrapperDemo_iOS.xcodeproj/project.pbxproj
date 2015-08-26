@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C17D4481B8C42C300E30C27 /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C17D4471B8C42C300E30C27 /* libMisfitCloudAPI.a */; };
+		2C837B3B1B79E509007C579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3A1B79E509007C579A /* main.m */; };
+		2C837B3E1B79E509007C579A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3D1B79E509007C579A /* AppDelegate.m */; };
+		2C837B411B79E509007C579A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B401B79E509007C579A /* FirstViewController.m */; };
+		2C837B441B79E509007C579A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B431B79E509007C579A /* SecondViewController.m */; };
+		2C837B471B79E509007C579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B451B79E509007C579A /* Main.storyboard */; };
+		2C837B491B79E509007C579A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B481B79E509007C579A /* Images.xcassets */; };
+		2C837B4C1B79E509007C579A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B4A1B79E509007C579A /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C17D4471B8C42C300E30C27 /* libMisfitCloudAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMisfitCloudAPI.a; path = "../../../../Library/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos/libMisfitCloudAPI.a"; sourceTree = "<group>"; };
+		2C837B351B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisfitCloudAPIWrapperDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C837B391B79E509007C579A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C837B3A1B79E509007C579A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C837B3C1B79E509007C579A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C837B3D1B79E509007C579A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C837B3F1B79E509007C579A /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		2C837B401B79E509007C579A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		2C837B421B79E509007C579A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		2C837B431B79E509007C579A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2C837B461B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C837B481B79E509007C579A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C837B4B1B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C837B321B79E509007C579A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C17D4481B8C42C300E30C27 /* libMisfitCloudAPI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C17D4461B8C427300E30C27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C17D4471B8C42C300E30C27 /* libMisfitCloudAPI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C837B2C1B79E509007C579A = {
+			isa = PBXGroup;
+			children = (
+				2C17D4461B8C427300E30C27 /* Frameworks */,
+				2C837B371B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS */,
+				2C837B361B79E509007C579A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C837B361B79E509007C579A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C837B351B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C837B371B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2C837B3C1B79E509007C579A /* AppDelegate.h */,
+				2C837B3D1B79E509007C579A /* AppDelegate.m */,
+				2C837B3F1B79E509007C579A /* FirstViewController.h */,
+				2C837B401B79E509007C579A /* FirstViewController.m */,
+				2C837B421B79E509007C579A /* SecondViewController.h */,
+				2C837B431B79E509007C579A /* SecondViewController.m */,
+				2C837B451B79E509007C579A /* Main.storyboard */,
+				2C837B481B79E509007C579A /* Images.xcassets */,
+				2C837B4A1B79E509007C579A /* LaunchScreen.xib */,
+				2C837B381B79E509007C579A /* Supporting Files */,
+			);
+			path = MisfitCloudAPIWrapperDemo_iOS;
+			sourceTree = "<group>";
+		};
+		2C837B381B79E509007C579A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C837B391B79E509007C579A /* Info.plist */,
+				2C837B3A1B79E509007C579A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C837B341B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C837B5B1B79E50A007C579A /* Build configuration list for PBXNativeTarget "MisfitCloudAPIWrapperDemo_iOS" */;
+			buildPhases = (
+				2C837B311B79E509007C579A /* Sources */,
+				2C837B321B79E509007C579A /* Frameworks */,
+				2C837B331B79E509007C579A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MisfitCloudAPIWrapperDemo_iOS;
+			productName = MisfitCloudAPIWrapperDemo_iOS;
+			productReference = 2C837B351B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C837B2D1B79E509007C579A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Misfit;
+				TargetAttributes = {
+					2C837B341B79E509007C579A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 2C837B301B79E509007C579A /* Build configuration list for PBXProject "MisfitCloudAPIWrapperDemo_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C837B2C1B79E509007C579A;
+			productRefGroup = 2C837B361B79E509007C579A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C837B341B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C837B331B79E509007C579A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C837B471B79E509007C579A /* Main.storyboard in Resources */,
+				2C837B4C1B79E509007C579A /* LaunchScreen.xib in Resources */,
+				2C837B491B79E509007C579A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C837B311B79E509007C579A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C837B441B79E509007C579A /* SecondViewController.m in Sources */,
+				2C837B3E1B79E509007C579A /* AppDelegate.m in Sources */,
+				2C837B411B79E509007C579A /* FirstViewController.m in Sources */,
+				2C837B3B1B79E509007C579A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C837B451B79E509007C579A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C837B461B79E509007C579A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C837B4A1B79E509007C579A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C837B4B1B79E509007C579A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C837B591B79E50A007C579A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C837B5A1B79E50A007C579A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C837B5C1B79E50A007C579A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MisfitCloudAPIWrapperDemo_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/aseign/dev/misfit/MisfitCloudAPIWrapper_iOS/MisfitCloudAPIWrapper_iOS/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C837B5D1B79E50A007C579A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MisfitCloudAPIWrapperDemo_iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/aseign/dev/misfit/MisfitCloudAPIWrapper_iOS/MisfitCloudAPIWrapper_iOS/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C837B301B79E509007C579A /* Build configuration list for PBXProject "MisfitCloudAPIWrapperDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C837B591B79E50A007C579A /* Debug */,
+				2C837B5A1B79E50A007C579A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C837B5B1B79E50A007C579A /* Build configuration list for PBXNativeTarget "MisfitCloudAPIWrapperDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C837B5C1B79E50A007C579A /* Debug */,
+				2C837B5D1B79E50A007C579A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C837B2D1B79E509007C579A /* Project object */;
+}
