@@ -242,6 +242,18 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
                                                          }];
 }
 
+- (void) getActivityGraphWithCompletionByDate:(NSDate *)date completion:(MFCCompletion) completion
+{
+    [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/activity/graph"
+                                                      httpMethod:@"GET"
+                                                      parameters:@{@"date":[self getDateStr:date]}
+                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                             completion(responseObject,nil);
+                                                         } failure:^(MFCError * error) {
+                                                             completion(nil,error);
+                                                         }];
+}
+
 - (void) getActivityDetailWithCompletionByDate:(NSDate *)date completion:(MFCCompletion) completion
 {
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/activity"

@@ -40,6 +40,8 @@ typedef enum {
 
 - (void) getActivitySummaryWithCompletionByDate:(NSDate *)date range:(MFCQuerySummaryRange)range completion:(MFCCompletion) completion;
 - (void) getActivityDetailWithCompletionByDate:(NSDate *)date completion:(MFCCompletion) completion;
+- (void) getActivityGraphWithCompletionByDate:(NSDate *)date completion:(MFCCompletion) completion;
+
 - (void) getSleepSummaryWithCompletionByDate:(NSDate *)date range:(MFCQuerySummaryRange)range completion:(MFCCompletion) completion;
 - (void) getSleepDetailWithCompletionByDate:(NSDate *)date completion:(MFCCompletion) completion;
 - (void) getWeightSummaryWithCompletionByDate:(NSDate *)date range:(MFCQuerySummaryRange)range completion:(MFCCompletion) completion;
