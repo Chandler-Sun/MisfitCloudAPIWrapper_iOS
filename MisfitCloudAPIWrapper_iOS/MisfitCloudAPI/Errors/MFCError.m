@@ -1,5 +1,5 @@
 //
-//  MFLError.m
+//  MFCError.m
 //  MFLButtonSDK
 //
 //  Created by ASeign on 7/30/15.
@@ -53,11 +53,19 @@
     return networkError;
     
 }
-+ (instancetype)networkErrorGeneral
++ (instancetype)businessErrorUserCanceled
 {
-    MFCError *networkError = [[MFCError alloc] init];
-    networkError.localizedTitle = MFCLocalizedString(@"Error", nil);
-    networkError.localizedMessage = MFCLocalizedString(@"An unexpected error occurred. Please try again later.", nil);
-    return networkError;
+    MFCError *businessError = [[MFCError alloc] init];
+    businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
+    businessError.localizedMessage = MFCLocalizedString(@"User cancelled the action.", nil);
+    return businessError;
+}
+
++ (instancetype)businessErrorForbidden
+{
+    MFCError *businessError = [[MFCError alloc] init];
+    businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
+    businessError.localizedMessage = MFCLocalizedString(@"Invalid appId or appSecret not match.", nil);
+    return businessError;
 }
 @end

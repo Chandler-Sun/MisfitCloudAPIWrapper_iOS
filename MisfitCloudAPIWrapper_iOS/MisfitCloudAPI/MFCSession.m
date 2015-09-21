@@ -11,8 +11,8 @@
 #import "NSString+MD5.h"
 #import "NSURL+QueryItem.h"
 #import "MFCAPIClient.h"
-
-
+#import "MFCError.h"
+#import "MFCError+Private.h"
 
 #if DEBUG || STAGING
 static NSString * const kMisfitAppUrlScheme = @"shine-internal://";
@@ -126,18 +126,22 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     NSDictionary * params = [url queryItems];
     //URL: mfc-misfittest://authorize#access_token=[token]
     //OR: mfc-misfittest://authorize?error=cancel
-    NSString * error = [params objectForKey:@"error"];
     
-    if(error){
-        MFSLogError(@"authorization error:%@",error);
+    NSString * errorCode = [params objectForKey:@"error"];   
+    
+    if((errorCode) && (![errorCode isEqualToString:@""])){
+        if (self.connectCompletion) {
+            if([errorCode isEqualToString:@"cancel"]){
+                self.connectCompletion(nil, [MFCError businessErrorUserCanceled]);
+            }else{
+                self.connectCompletion(nil, [MFCError businessErrorForbidden]);
+            }
+        }
         return NO;
     }
     NSDictionary * fragParams = [url fragmentItems];
     NSString * token = [fragParams objectForKey:@"access_token"];
-    
-    if(!token){
-        return NO;
-    }
+
     self.token = token;
     self.isConnected = YES;
     

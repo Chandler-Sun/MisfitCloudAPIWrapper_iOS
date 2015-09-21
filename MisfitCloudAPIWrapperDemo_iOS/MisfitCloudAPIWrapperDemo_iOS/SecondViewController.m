@@ -56,6 +56,13 @@
                 }
                 [self appendMessage:[self getJSONStringFromDict:data]];
             }];
+        }else if([action isEqualToString:@"Graph"]){
+            [[MFCSession sharedInstance] getActivityGraphWithCompletionByDate:[NSDate date] completion:^(NSDictionary *data, MFCError *error) {
+                if(error){
+                    return [self appendMessage:error.localizedMessage];
+                }
+                [self appendMessage:[self getJSONStringFromDict:data]];
+            }];
         }else if([action isEqualToString:@"Activity Summary"]){
             [[MFCSession sharedInstance] getActivitySummaryWithCompletionByDate:[NSDate date] range:MFCQuerySummaryRangeWeek completion:^(NSDictionary *data, MFCError *error) {
                 if(error){

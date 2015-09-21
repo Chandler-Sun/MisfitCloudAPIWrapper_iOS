@@ -11,6 +11,7 @@
 #import "AFHTTPSessionManager.h"
 #import "AFHTTPRequestOperation.h"
 #import "MFCError.h"
+#import "MFCError+Private.h"
 
 typedef void (^MFCAPIClientSuccess)(AFHTTPRequestOperation *operation, id responseObject);
 typedef void (^MFCAPIClientFailure)(MFCError * error);

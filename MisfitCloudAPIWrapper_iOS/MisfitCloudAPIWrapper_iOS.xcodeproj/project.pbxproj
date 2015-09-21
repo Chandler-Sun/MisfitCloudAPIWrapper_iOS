@@ -94,6 +94,7 @@
 		2C17D4701B8C4A1400E30C27 /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		2C17D4711B8C4A1400E30C27 /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		2C17D4731B8C4FA200E30C27 /* Project.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project.pch; sourceTree = "<group>"; };
+		2C5AE1781BB04CF90088C979 /* MFCError+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFCError+Private.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +150,7 @@
 		2C17D42C1B8B899600E30C27 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				2C5AE1781BB04CF90088C979 /* MFCError+Private.h */,
 				2C17D42D1B8B899600E30C27 /* MFCError.h */,
 				2C17D42E1B8B899600E30C27 /* MFCError.m */,
 			);
@@ -380,6 +382,7 @@
 					"$(ARCHS_STANDARD)",
 					x86_64,
 					i386,
+					armv7s,
 				);
 				GCC_PREFIX_HEADER = MisfitCloudAPI/Project.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -388,6 +391,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -401,9 +405,11 @@
 					"$(ARCHS_STANDARD)",
 					x86_64,
 					i386,
+					armv7s,
 				);
 				GCC_PREFIX_HEADER = MisfitCloudAPI/Project.pch;
 				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LIBTOOLFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -538,6 +544,7 @@
 				2C17D4251B8B890900E30C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C17D4261B8B890900E30C27 /* Build configuration list for PBXNativeTarget "MisfitCloudAPITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +553,7 @@
 				2C17D4281B8B890900E30C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C837B0A1B79E4BC007C579A /* Build configuration list for PBXProject "MisfitCloudAPIWrapper_iOS" */ = {
 			isa = XCConfigurationList;

@@ -23,9 +23,4 @@
 @property (strong, nonatomic) NSString * localizedTitle;
 @property (strong, nonatomic) NSString * localizedMessage;
 
-+ (instancetype)networkErrorFromError:(NSError *)error;
-+ (instancetype)networkErrorFromMetaDict:(NSDictionary *)metaDict;
-+ (instancetype)networkErrorWrongResponseFromServer;
-+ (instancetype)networkErrorGeneral;
-+ (instancetype)networkErrorContactTechSupport;
 @end
