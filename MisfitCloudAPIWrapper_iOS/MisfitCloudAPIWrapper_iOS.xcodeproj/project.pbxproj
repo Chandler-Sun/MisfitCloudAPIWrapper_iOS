@@ -13,9 +13,9 @@
 		2C17D43B1B8B899600E30C27 /* NSData+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4331B8B899600E30C27 /* NSData+HexString.m */; };
 		2C17D43C1B8B899600E30C27 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4351B8B899600E30C27 /* NSString+MD5.m */; };
 		2C17D43D1B8B899600E30C27 /* NSURL+QueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D4371B8B899600E30C27 /* NSURL+QueryItem.m */; };
-		2C17D4491B8C433000E30C27 /* MFCError.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42D1B8B899600E30C27 /* MFCError.h */; };
-		2C17D44A1B8C433000E30C27 /* MFCSession.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42B1B8B899600E30C27 /* MFCSession.h */; };
-		2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C17D42F1B8B899600E30C27 /* MisfitCloudAPI.h */; };
+		2C17D4491B8C433000E30C27 /* MFCError.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 2C17D42D1B8B899600E30C27 /* MFCError.h */; };
+		2C17D44A1B8C433000E30C27 /* MFCSession.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 2C17D42B1B8B899600E30C27 /* MFCSession.h */; };
+		2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 2C17D42F1B8B899600E30C27 /* MisfitCloudAPI.h */; };
 		2C17D46C1B8C45A600E30C27 /* MFCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17D46B1B8C45A600E30C27 /* MFCAPIClient.m */; };
 		2C9A8F651BBA4B1500EFA94D /* FSN_categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9A8F601BBA4B1500EFA94D /* FSN_categories.m */; };
 		2C9A8F661BBA4B1500EFA94D /* FSNConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9A8F621BBA4B1500EFA94D /* FSNConnection.m */; };
@@ -33,16 +33,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2C17D4101B8B890800E30C27 /* CopyFiles */ = {
+		2C17D4101B8B890800E30C27 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				2C17D4491B8C433000E30C27 /* MFCError.h in CopyFiles */,
-				2C17D44A1B8C433000E30C27 /* MFCSession.h in CopyFiles */,
-				2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in CopyFiles */,
+				2C17D4491B8C433000E30C27 /* MFCError.h in Copy Files */,
+				2C17D44A1B8C433000E30C27 /* MFCSession.h in Copy Files */,
+				2C17D44B1B8C433000E30C27 /* MisfitCloudAPI.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -222,7 +223,7 @@
 			buildPhases = (
 				2C17D40E1B8B890800E30C27 /* Sources */,
 				2C17D40F1B8B890800E30C27 /* Frameworks */,
-				2C17D4101B8B890800E30C27 /* CopyFiles */,
+				2C17D4101B8B890800E30C27 /* Copy Files */,
 			);
 			buildRules = (
 			);

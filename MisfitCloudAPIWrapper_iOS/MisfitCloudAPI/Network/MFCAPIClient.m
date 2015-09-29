@@ -57,8 +57,7 @@ static MFCAPIClient *_sharedClient = nil;
                                 success:(MFCAPIClientSuccess)success
                                 failure:(MFCAPIClientFailure)failure
 {
-    NSString * urlString = [NSString stringWithFormat:@"%@%@",self.baseURL,relativePath];
-    NSURL * url = [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:relativePath relativeToURL:self.baseURL];
     NSLog(@"Misfit Cloud API URL: %@, %@",url, self.defaultHeaders);
     
     FSNRequestMethod theMethod = FSNRequestMethodGET;
