@@ -17,5 +17,6 @@
 + (instancetype)networkErrorContactTechSupport;
 + (instancetype)businessErrorUserCanceled;
 + (instancetype)businessErrorForbidden;
++ (instancetype)businessErrorNotAuthorized;
 
 @end

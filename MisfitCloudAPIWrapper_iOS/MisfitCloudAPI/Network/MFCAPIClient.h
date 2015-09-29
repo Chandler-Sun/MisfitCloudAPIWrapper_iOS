@@ -7,17 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPRequestOperationManager.h"
-#import "AFHTTPSessionManager.h"
-#import "AFHTTPRequestOperation.h"
 #import "MFCError.h"
 #import "MFCError+Private.h"
 
-typedef void (^MFCAPIClientSuccess)(AFHTTPRequestOperation *operation, id responseObject);
+typedef void (^MFCAPIClientSuccess)(id responseObject);
 typedef void (^MFCAPIClientFailure)(MFCError * error);
 
 
-@interface MFCAPIClient : AFHTTPSessionManager
+@interface MFCAPIClient : NSObject
 
 + (MFCAPIClient *)sharedClient;
 
@@ -28,12 +25,6 @@ typedef void (^MFCAPIClientFailure)(MFCError * error);
                              parameters:(NSDictionary *)parameters
                                 success:(MFCAPIClientSuccess)success
                                 failure:(MFCAPIClientFailure)failure;
-
-- (AFHTTPRequestOperation *)requestOperationToMisfitRelativePath:(NSString *)relativePath
-                                                      httpMethod:(NSString *)httpMethod
-                                                      parameters:(NSDictionary *)parameters
-                                                         success:(MFCAPIClientSuccess)success
-                                                         failure:(MFCAPIClientFailure)failure;
 
 + (NSString *)extraUserAgent;
 

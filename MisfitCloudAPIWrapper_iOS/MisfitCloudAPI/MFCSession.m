@@ -97,7 +97,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
         [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:[NSString stringWithFormat:@"/oauth/revoke/%@",self.appId]
                                                           httpMethod:@"POST"
                                                           parameters:@{}
-                                                             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                             success:^(id responseObject) {
                                                                 
                                                                  [self reset];
                                                                  
@@ -193,7 +193,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/profile"
                                                       httpMethod:@"GET"
                                                       parameters:@{}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -204,7 +204,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/profile/statistics"
                                                       httpMethod:@"GET"
                                                       parameters:@{}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -215,7 +215,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/profile/settings"
                                                       httpMethod:@"GET"
                                                       parameters:@{}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -226,7 +226,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/device/list"
                                                       httpMethod:@"GET"
                                                       parameters:@{}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -239,7 +239,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date":[self getDateStr:date],
                                                                    @"period":[self getRangeStringByType:range]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -251,7 +251,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/activity/graph"
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date":[self getDateStr:date]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -263,7 +263,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/activity"
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date":[self getDateStr:date]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -275,7 +275,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date":[self getDateStr:date],
                                                                    @"period":[self getRangeStringByType:range]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -287,7 +287,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     [[MFCAPIClient sharedClient] sendRequestToMisfitRelativePath:@"user/me/sleep"
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date": [self getDateStr:date]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);
@@ -299,7 +299,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
                                                       httpMethod:@"GET"
                                                       parameters:@{@"date":[self getDateStr:date],
                                                                    @"period":[self getRangeStringByType:range]}
-                                                         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                         success:^(id responseObject) {
                                                              completion(responseObject,nil);
                                                          } failure:^(MFCError * error) {
                                                              completion(nil,error);

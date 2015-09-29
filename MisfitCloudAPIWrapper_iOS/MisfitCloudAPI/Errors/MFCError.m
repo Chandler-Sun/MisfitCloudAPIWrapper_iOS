@@ -45,6 +45,14 @@
     return networkError;
 }
 
++ (instancetype)networkErrorGeneral
+{
+    MFCError *networkError = [[MFCError alloc] init];
+    networkError.localizedTitle = MFCLocalizedString(@"Error", nil);
+    networkError.localizedMessage = MFCLocalizedString(@"An unexpected error occurred. Please try again later.", nil);
+    return networkError;
+}
+
 + (instancetype)networkErrorContactTechSupport
 {
     MFCError *networkError = [[MFCError alloc] init];
@@ -66,6 +74,14 @@
     MFCError *businessError = [[MFCError alloc] init];
     businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
     businessError.localizedMessage = MFCLocalizedString(@"Invalid appId or appSecret not match.", nil);
+    return businessError;
+}
+
++ (instancetype)businessErrorNotAuthorized
+{
+    MFCError *businessError = [[MFCError alloc] init];
+    businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
+    businessError.localizedMessage = MFCLocalizedString(@"Invalid access token.", nil);
     return businessError;
 }
 @end

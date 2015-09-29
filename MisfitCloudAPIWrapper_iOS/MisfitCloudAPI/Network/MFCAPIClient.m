@@ -7,19 +7,17 @@
 //
 
 #import "MFCAPIClient.h"
-#import "AFNetworkActivityLogger.h"
-
-#define AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES 1
+#import "FSNConnection.h"
 
 #if DEBUG
-static NSString * const kCloudAPIv2BaseURL = @"http://build.int.misfit.com/cloudapi/resource/v2/";
+static NSString * const kCloudAPIv2BaseURL = @"https://build.int.misfit.com/cloudapi/resource/v2/";
 #else
 static NSString * const kCloudAPIv2BaseURL = @"https://build.misfit.com/cloudapi/resource/v2/";
 #endif
 @interface MFCAPIClient()
 
-@property (strong, nonatomic) AFHTTPRequestOperationManager * requestOperationManager;
-
+@property (strong, nonatomic) NSURL * baseURL;
+@property (strong, nonatomic) NSMutableDictionary * defaultHeaders;
 @end
 
 @implementation MFCAPIClient
@@ -33,31 +31,24 @@ static MFCAPIClient *_sharedClient = nil;
         NSString * baseUrlString = kCloudAPIv2BaseURL;
         NSURL * baseURL = [NSURL URLWithString:[baseUrlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         _sharedClient = [[MFCAPIClient alloc] initWithBaseURL:baseURL];
-        
-        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelDebug;
-        [[AFNetworkActivityLogger sharedLogger] startLogging];
     });
     return _sharedClient;
 }
 
 - (instancetype)initWithBaseURL:(NSURL *)url
 {
-    self = [super initWithBaseURL:url];
+    self = [super init];
     if (self) {
-        self.requestSerializer = [AFJSONRequestSerializer serializer];
-        self.responseSerializer = [AFJSONResponseSerializer serializer];
-        self.requestOperationManager = [AFHTTPRequestOperationManager manager];
-        
-        AFSecurityPolicy *securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-        securityPolicy.allowInvalidCertificates = AFNETWORKING_ALLOW_INVALID_SSL_CERTIFICATES;
-        self.securityPolicy = securityPolicy;
+        self.baseURL = url;
+        self.defaultHeaders = [[NSMutableDictionary alloc] init];
+        [self.defaultHeaders setValue:[MFCAPIClient extraUserAgent] forKey:@"User-Agent"];
     }
     return self;
 }
 
 - (void)setDefaultHeader:(NSString *)header withValue:(NSString *) value
 {
-     [self.requestSerializer setValue:value forHTTPHeaderField:header];
+    [self.defaultHeaders setValue:value forKey:header];
 }
 
 - (void)sendRequestToMisfitRelativePath:(NSString *)relativePath
@@ -66,51 +57,51 @@ static MFCAPIClient *_sharedClient = nil;
                                 success:(MFCAPIClientSuccess)success
                                 failure:(MFCAPIClientFailure)failure
 {
-    AFHTTPRequestOperation *operation = [self requestOperationToMisfitRelativePath:relativePath
-                                                                        httpMethod:httpMethod
-                                                                        parameters:parameters
-                                                                           success:success
-                                                                           failure:failure];
+    NSString * urlString = [NSString stringWithFormat:@"%@%@",self.baseURL,relativePath];
+    NSURL * url = [NSURL URLWithString:urlString];
+    NSLog(@"Misfit Cloud API URL: %@, %@",url, self.defaultHeaders);
     
-    [self.requestOperationManager.operationQueue addOperation:operation];
-}
-
-- (AFHTTPRequestOperation *)requestOperationToMisfitRelativePath:(NSString *)relativePath
-                                                      httpMethod:(NSString *)httpMethod
-                                                      parameters:(NSDictionary *)parameters
-                                                         success:(MFCAPIClientSuccess)success
-                                                         failure:(MFCAPIClientFailure)failure
-{
-    NSString * absolutePath = [[NSURL URLWithString:relativePath relativeToURL:self.baseURL] absoluteString];
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:httpMethod
-                                                                   URLString:absolutePath
-                                                                  parameters:parameters
-                                                                       error:nil];
+    FSNRequestMethod theMethod = FSNRequestMethodGET;
+    if ([[httpMethod lowercaseString] isEqualToString:@"post"]) {
+        theMethod = FSNRequestMethodPOST;
+    }
+    FSNConnection *connection =
+    [FSNConnection withUrl:url
+                    method:theMethod
+                   headers:self.defaultHeaders
+                parameters:parameters
+                parseBlock:^id(FSNConnection *c, NSError **error) {
+                    if ((!c.responseData) || ([c.responseData length] == 0)) {
+                        return @{};
+                    }
+                    return [c.responseData dictionaryFromJSONWithError:error];
+                }
+           completionBlock:^(FSNConnection *c) {
+               NSLog(@"complete: %@\n  error: %@\n  parseResult: %@\n", c, c.error, c.parseResult);
+               if(c.error)
+               {
+                   NSLog(@"error: %@",c.error);
+                   failure([MFCError networkErrorFromError:c.error]);
+               }
+               else
+               {
+                   NSDictionary *response = (NSDictionary*)c.parseResult;
+                   [self handleCommonMisfitResponseObject:response
+                                                operation:c
+                                                  success:success
+                                                  failure:failure];
+               }
+           }
+             progressBlock:^(FSNConnection *c) {
+                 NSLog(@"progress: %@: %.2f/%.2f", c, c.uploadProgress, c.downloadProgress);
+             }];
     
-    [request setValue:[self generateCallId] forHTTPHeaderField:@"call_id"];
-    
-    AFHTTPRequestOperation *operation =
-    [self.requestOperationManager
-     HTTPRequestOperationWithRequest:request
-     success:^(AFHTTPRequestOperation *operation, id responseObject) {
-         [self handleCommonMisfitResponseObject:responseObject
-                                      operation:operation
-                                        success:success
-                                        failure:failure];
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         [self handleCommonMisfitResponseObject:operation.responseObject
-                                      operation:operation
-                                        success:success
-                                        failure:failure];
-     }];
-
-    return operation;
+    [connection start];
 }
 
 - (void)handleCommonMisfitResponseObject:(NSDictionary * )responseObject
-                               operation:(AFHTTPRequestOperation *)operation
-                                 success:(void (^)(AFHTTPRequestOperation *, id))success
+                               operation:(FSNConnection *)operation
+                                 success:(MFCAPIClientSuccess)success
                                  failure:(MFCAPIClientFailure)failure
 {
     NSInteger httpCode = operation.response.statusCode;
@@ -139,6 +130,15 @@ static MFCAPIClient *_sharedClient = nil;
         }
         return;
     }
+    // HTTP 4xx: authentication error
+    if (httpCode >= 400)
+    {
+        if (failure)
+        {
+            failure([MFCError businessErrorNotAuthorized]);
+        }
+        return;
+    }
     
     NSDictionary *metaDict = [responseObject objectForKey:@"meta"];
     
@@ -163,7 +163,7 @@ static MFCAPIClient *_sharedClient = nil;
     {
         if (success)
         {
-            success(operation, responseObject);
+            success(responseObject);
         }
         return;
     }
@@ -189,8 +189,8 @@ static MFCAPIClient *_sharedClient = nil;
     static NSString * userAgent;
     if (userAgent == nil)
     {
-        userAgent = [NSString stringWithFormat:@" ## link;%@;%@;iOS",
-                     [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"],
+        userAgent = [NSString stringWithFormat:@" ## misfit3rdparty;%@;%@;iOS",
+                     [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"],
                      @"CloudAPISDK"];
     }
    
@@ -199,8 +199,8 @@ static MFCAPIClient *_sharedClient = nil;
 
 - (void)cancelAllRequests
 {
-    MFSLogInfo(@"Cancel %@ request(s) in ShineAppAPIClient's queue", @(self.requestOperationManager.operationQueue.operations.count));
-    [self.requestOperationManager.operationQueue cancelAllOperations];
+    NSLog(@"cancelAllConnections");
+    [FSNConnection cancelAllConnections];
 }
 
 @end

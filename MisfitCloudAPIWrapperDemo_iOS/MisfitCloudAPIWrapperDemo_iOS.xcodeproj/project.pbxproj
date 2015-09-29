@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C5AE1761BB049070088C979 /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */; };
 		2C837B3B1B79E509007C579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3A1B79E509007C579A /* main.m */; };
 		2C837B3E1B79E509007C579A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3D1B79E509007C579A /* AppDelegate.m */; };
 		2C837B411B79E509007C579A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B401B79E509007C579A /* FirstViewController.m */; };
@@ -15,8 +14,7 @@
 		2C837B471B79E509007C579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B451B79E509007C579A /* Main.storyboard */; };
 		2C837B491B79E509007C579A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B481B79E509007C579A /* Images.xcassets */; };
 		2C837B4C1B79E509007C579A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B4A1B79E509007C579A /* LaunchScreen.xib */; };
-		2C9C4B5D1BAAB8DB002E7D63 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9C4B5C1BAAB8DB002E7D63 /* SystemConfiguration.framework */; };
-		2C9C4B5F1BAAB95F002E7D63 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9C4B5E1BAAB95F002E7D63 /* MobileCoreServices.framework */; };
+		2C9A8F681BBA658400EFA94D /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +31,6 @@
 		2C837B461B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C837B481B79E509007C579A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C837B4B1B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2C9C4B5C1BAAB8DB002E7D63 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2C9C4B5E1BAAB95F002E7D63 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,9 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C5AE1761BB049070088C979 /* libMisfitCloudAPI.a in Frameworks */,
-				2C9C4B5F1BAAB95F002E7D63 /* MobileCoreServices.framework in Frameworks */,
-				2C9C4B5D1BAAB8DB002E7D63 /* SystemConfiguration.framework in Frameworks */,
+				2C9A8F681BBA658400EFA94D /* libMisfitCloudAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */,
-				2C9C4B5E1BAAB95F002E7D63 /* MobileCoreServices.framework */,
-				2C9C4B5C1BAAB8DB002E7D63 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
