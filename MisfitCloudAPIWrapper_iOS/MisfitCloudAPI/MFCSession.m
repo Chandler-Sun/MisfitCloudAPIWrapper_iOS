@@ -16,8 +16,10 @@
 
 #if DEBUG || STAGING
 static NSString * const kMisfitAppUrlScheme = @"shine-internal://";
+static NSString * const kMisfitDeveloperPortalDomain = @"https://build.int.misfit.com";
 #else
 static NSString * const kMisfitAppUrlScheme = @"shine://";
+static NSString * const kMisfitDeveloperPortalDomain = @"https://build.misfit.com";
 #endif
 
 static NSString * const kMisfitCloudAPIToken = @"__misfit_cloud_api_token";
@@ -70,11 +72,12 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
               completion:(MFCCompletion) completion
 {
     BOOL canOpenApp = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:kMisfitAppUrlScheme]];
+
+    self.appId = appId;
+    self.appSecret = appSecret;
+    self.connectCompletion = completion;
+
     if(canOpenApp){
-        
-        self.appId = appId;
-        self.appSecret = appSecret;
-        self.connectCompletion = completion;
         
         //get hash of app secret. not used yet
         //NSString * appSecretMD5 = [appSecret MD5String];
@@ -87,7 +90,13 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
 
 
     }else{
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/shine/id564157241"]];
+        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-apps://itunes.apple.com/app/shine/id564157241"]];
+        NSString * redirectURL = [NSString stringWithFormat:@"%@/oauth/authorize?response_type=token&app_id=%@&secret_hash=%@",
+                                  kMisfitDeveloperPortalDomain,
+                                  appId,
+                                  appId];//for compatibility
+
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:redirectURL]];
     }
 }
 
@@ -167,8 +176,8 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
 
 - (BOOL) canHandleOpenUrl:(NSURL *) url
 {
-    NSString * redirectBackFromMisfitAppSchema = [NSString stringWithFormat:@"mfc-%@", self.appId];
-    return [url.scheme isEqualToString:redirectBackFromMisfitAppSchema];
+    NSString * redirectBackFromMisfitAppSchema = [[NSString stringWithFormat:@"mfc-%@", self.appId] lowercaseString];
+    return [[url.scheme lowercaseString] isEqualToString:redirectBackFromMisfitAppSchema];
 }
 
 - (void)handleDidBecomeActive

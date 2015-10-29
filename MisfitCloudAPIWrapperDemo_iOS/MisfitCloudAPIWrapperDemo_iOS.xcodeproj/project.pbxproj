@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2DD94F1BE07A7D00CD17D9 /* MisfitCloudAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */; };
+		2C82C9F91BDE186600A02B9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C82C9F71BDE186600A02B9F /* LaunchScreen.xib */; };
 		2C837B3B1B79E509007C579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3A1B79E509007C579A /* main.m */; };
 		2C837B3E1B79E509007C579A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3D1B79E509007C579A /* AppDelegate.m */; };
 		2C837B411B79E509007C579A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B401B79E509007C579A /* FirstViewController.m */; };
 		2C837B441B79E509007C579A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B431B79E509007C579A /* SecondViewController.m */; };
 		2C837B471B79E509007C579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B451B79E509007C579A /* Main.storyboard */; };
 		2C837B491B79E509007C579A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B481B79E509007C579A /* Images.xcassets */; };
-		2C837B4C1B79E509007C579A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B4A1B79E509007C579A /* LaunchScreen.xib */; };
-		2C9A8F681BBA658400EFA94D /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMisfitCloudAPI.a; path = "../../../../Library/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos/libMisfitCloudAPI.a"; sourceTree = "<group>"; };
+		2C82C9F81BDE186600A02B9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2C837B351B79E509007C579A /* MisfitCloudAPIWrapperDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MisfitCloudAPIWrapperDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C837B391B79E509007C579A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C837B3A1B79E509007C579A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -30,7 +30,7 @@
 		2C837B431B79E509007C579A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		2C837B461B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C837B481B79E509007C579A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2C837B4B1B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MisfitCloudAPI.framework; path = ../RELEASE/MisfitCloudAPI.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C9A8F681BBA658400EFA94D /* libMisfitCloudAPI.a in Frameworks */,
+				2C2DD94F1BE07A7D00CD17D9 /* MisfitCloudAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +48,7 @@
 		2C17D4461B8C427300E30C27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C5AE1751BB049070088C979 /* libMisfitCloudAPI.a */,
+				2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,8 +80,8 @@
 				2C837B421B79E509007C579A /* SecondViewController.h */,
 				2C837B431B79E509007C579A /* SecondViewController.m */,
 				2C837B451B79E509007C579A /* Main.storyboard */,
+				2C82C9F71BDE186600A02B9F /* LaunchScreen.xib */,
 				2C837B481B79E509007C579A /* Images.xcassets */,
-				2C837B4A1B79E509007C579A /* LaunchScreen.xib */,
 				2C837B381B79E509007C579A /* Supporting Files */,
 			);
 			path = MisfitCloudAPIWrapperDemo_iOS;
@@ -122,7 +122,7 @@
 		2C837B2D1B79E509007C579A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Misfit;
 				TargetAttributes = {
 					2C837B341B79E509007C579A = {
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C837B471B79E509007C579A /* Main.storyboard in Resources */,
-				2C837B4C1B79E509007C579A /* LaunchScreen.xib in Resources */,
+				2C82C9F91BDE186600A02B9F /* LaunchScreen.xib in Resources */,
 				2C837B491B79E509007C579A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,20 +176,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2C82C9F71BDE186600A02B9F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C82C9F81BDE186600A02B9F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		2C837B451B79E509007C579A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2C837B461B79E509007C579A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2C837B4A1B79E509007C579A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C837B4B1B79E509007C579A /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -216,6 +216,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -231,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -269,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,7 +281,7 @@
 		2C837B5C1B79E50A007C579A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/aseign/dev/misfit/MisfitCloudAPIWrapper_iOS/RELEASE,
@@ -292,15 +293,18 @@
 					"/Users/aseign/dev/misfit/MisfitCloudAPIWrapper_iOS/MisfitCloudAPIWrapper_iOS/build/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.misfit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2C837B5D1B79E50A007C579A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/aseign/dev/misfit/MisfitCloudAPIWrapper_iOS/RELEASE,
@@ -313,7 +317,9 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.misfit.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

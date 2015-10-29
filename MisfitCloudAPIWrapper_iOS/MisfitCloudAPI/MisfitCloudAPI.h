@@ -10,12 +10,5 @@
 #import "MFCSession.h"
 #import "MFCError.h"
 
-//! Project version number for MisfitCloudAPIWrapper_iOS.
-FOUNDATION_EXPORT double MisfitCloudAPIWrapper_iOSVersionNumber;
 
-//! Project version string for MisfitCloudAPIWrapper_iOS.
-FOUNDATION_EXPORT const unsigned char MisfitCloudAPIWrapper_iOSVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MisfitCloudAPIWrapper_iOS/PublicHeader.h>
-
-
+#define MISFIT_CLOUD_SDK_V2_VERSION_STRING @"0.5.2-release"

@@ -1,205 +1,233 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J4N-A1-fuA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Connect-->
-        <scene sceneID="hNz-n2-bh7">
+        <scene sceneID="xBX-ph-ZGf">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="Joe-Ve-f6N" customClass="FirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
-                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                        <viewControllerLayoutGuide type="top" id="qaP-aZ-G9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="NP0-vV-gbk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="M3z-1j-gRT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-K5-4Ie">
-                                <rect key="frame" x="128" y="399" width="341" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ovP-C4-2dZ">
+                                <rect key="frame" x="240" y="399" width="118" height="30"/>
                                 <state key="normal" title="Connect to Misfit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onConnectTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iEz-Tg-wA9"/>
+                                    <action selector="onConnectTapped:" destination="Joe-Ve-f6N" eventType="touchUpInside" id="qii-CJ-C3H"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lys-LY-LWy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-aD-9DJ">
                                 <rect key="frame" x="221" y="448" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="ZVh-RY-YDF"/>
+                                </constraints>
                                 <state key="normal" title="Disconnect from Misfit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onDisconnectTapped:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ndq-Gv-1zk"/>
+                                    <action selector="onDisconnectTapped:" destination="Joe-Ve-f6N" eventType="touchUpInside" id="R7b-23-doX"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="log" translatesAutoresizingMaskIntoConstraints="NO" id="Ctq-jp-5rk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="log" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-9V-L5e">
                                 <rect key="frame" x="184" y="90" width="232" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="cV1-4e-5z7"/>
+                                    <constraint firstAttribute="height" constant="279" id="yWh-c9-qxh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Ctq-jp-5rk" secondAttribute="centerX" id="Byf-om-YR5"/>
-                            <constraint firstAttribute="centerX" secondItem="Ah8-K5-4Ie" secondAttribute="centerX" constant="1" id="IWp-d8-nb2"/>
-                            <constraint firstAttribute="centerX" secondItem="Lys-LY-LWy" secondAttribute="centerX" constant="2" id="W7u-qp-ZNb"/>
+                            <constraint firstItem="DM0-9V-L5e" firstAttribute="top" secondItem="qaP-aZ-G9J" secondAttribute="bottom" constant="70" id="9lF-my-bRP"/>
+                            <constraint firstItem="ovP-C4-2dZ" firstAttribute="top" secondItem="DM0-9V-L5e" secondAttribute="bottom" constant="30" id="D59-48-P8t"/>
+                            <constraint firstItem="5dh-aD-9DJ" firstAttribute="top" secondItem="ovP-C4-2dZ" secondAttribute="bottom" constant="19" id="Ixa-iO-i0k"/>
+                            <constraint firstAttribute="centerX" secondItem="ovP-C4-2dZ" secondAttribute="centerX" constant="1" id="RML-WE-x56"/>
+                            <constraint firstAttribute="centerX" secondItem="DM0-9V-L5e" secondAttribute="centerX" id="dBq-qN-nzX"/>
+                            <constraint firstAttribute="centerX" secondItem="5dh-aD-9DJ" secondAttribute="centerX" constant="2" id="fj5-wW-kZb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Connect" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Connect" image="first" id="bOM-nX-RTU"/>
                     <connections>
-                        <outlet property="btnConnectToMisfit" destination="Ah8-K5-4Ie" id="npn-J2-9AZ"/>
-                        <outlet property="btnDisconnectFromMisfit" destination="Lys-LY-LWy" id="DJS-Ax-n4K"/>
-                        <outlet property="tvMessage" destination="Ctq-jp-5rk" id="3jE-p2-ln8"/>
+                        <outlet property="btnConnectToMisfit" destination="ovP-C4-2dZ" id="uhv-6h-fQa"/>
+                        <outlet property="btnDisconnectFromMisfit" destination="5dh-aD-9DJ" id="c9J-N4-gCK"/>
+                        <outlet property="tvMessage" destination="DM0-9V-L5e" id="5FD-dY-Dd5"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTm-mN-WSH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="704" y="-433"/>
         </scene>
         <!--Read Data-->
-        <scene sceneID="wg7-f3-ORb">
+        <scene sceneID="ch8-zf-7fS">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="VQJ-09-fJG" customClass="SecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                        <viewControllerLayoutGuide type="top" id="2SN-vS-Lwd"/>
+                        <viewControllerLayoutGuide type="bottom" id="xgw-54-jIf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                    <view key="view" contentMode="scaleToFill" id="Gsq-j5-dRu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-zQ-Vjk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-qm-R55">
                                 <rect key="frame" x="190" y="48" width="44" height="30"/>
                                 <state key="normal" title="Profile">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="GYA-K7-HVR"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="wd0-P5-dVg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-gF-ckC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-az-A3C">
                                 <rect key="frame" x="256" y="48" width="64" height="30"/>
                                 <state key="normal" title="Statistics">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wnq-jl-dNf"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="Gxa-AV-iTP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpS-0p-lKu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-67-UL7">
                                 <rect key="frame" x="190" y="86" width="51" height="30"/>
                                 <state key="normal" title="Activity">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="0x0-73-s0a"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="MS1-98-I4F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMd-ry-Di5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-ll-X5b">
                                 <rect key="frame" x="256" y="86" width="120" height="30"/>
                                 <state key="normal" title="Activity Summary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="cVw-jX-HcL"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="uHh-Zs-adn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74Q-v3-bYr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e41-W5-lfn">
                                 <rect key="frame" x="343" y="48" width="57" height="30"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="4AY-pr-7Ms"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="3mN-Qp-6YE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZB-ci-JRW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-Fq-Sll">
                                 <rect key="frame" x="190" y="124" width="39" height="30"/>
                                 <state key="normal" title="Sleep">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9kN-gf-UN7"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="Pbl-m1-nFb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76u-fF-D1u">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-2G-cQ6">
                                 <rect key="frame" x="256" y="124" width="109" height="30"/>
                                 <state key="normal" title="Sleep Summary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="VWz-0D-hqi"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="Ah7-Ut-Dob"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBz-hg-Cy5">
-                                <rect key="frame" x="190" y="162" width="117" height="30"/>
-                                <state key="normal" title="Weight Summary">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="lIL-eA-JeP"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Data" translatesAutoresizingMaskIntoConstraints="NO" id="WQb-kH-ZQo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Data" translatesAutoresizingMaskIntoConstraints="NO" id="zjv-5h-r2j">
                                 <rect key="frame" x="184" y="200" width="232" height="279"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="7U9-ub-Uwg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOj-mo-J5Z">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTC-bj-OhZ">
                                 <rect key="frame" x="350" y="162" width="43" height="30"/>
                                 <state key="normal" title="Graph">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getData:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="8ua-uy-eq5"/>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="Ngz-X1-N0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-QI-7WY">
+                                <rect key="frame" x="190" y="162" width="117" height="30"/>
+                                <state key="normal" title="Weight Summary">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getData:" destination="VQJ-09-fJG" eventType="touchUpInside" id="Sqz-GV-aGW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="hpS-0p-lKu" secondAttribute="centerX" constant="85" id="0fy-ra-MvD"/>
-                            <constraint firstAttribute="centerX" secondItem="WQb-kH-ZQo" secondAttribute="centerX" id="0n1-fh-GS2"/>
-                            <constraint firstAttribute="centerX" secondItem="74Q-v3-bYr" secondAttribute="centerX" constant="-72" id="3yT-2e-KXK"/>
-                            <constraint firstAttribute="centerX" secondItem="fMd-ry-Di5" secondAttribute="centerX" constant="-16" id="4i4-CS-Yim"/>
-                            <constraint firstAttribute="centerX" secondItem="kOj-mo-J5Z" secondAttribute="centerX" constant="-72" id="C9w-nm-Nt6"/>
-                            <constraint firstAttribute="centerX" secondItem="EZB-ci-JRW" secondAttribute="centerX" constant="90" id="LLa-hy-PgW"/>
-                            <constraint firstAttribute="centerX" secondItem="fJI-zQ-Vjk" secondAttribute="centerX" constant="88" id="Nla-NG-pze"/>
-                            <constraint firstAttribute="centerX" secondItem="76u-fF-D1u" secondAttribute="centerX" constant="-11" id="atR-bf-g3V"/>
-                            <constraint firstAttribute="centerX" secondItem="YGx-gF-ckC" secondAttribute="centerX" constant="12" id="awM-Bh-7G9"/>
-                            <constraint firstAttribute="centerX" secondItem="aBz-hg-Cy5" secondAttribute="centerX" constant="52" id="ipr-SN-d9v"/>
+                            <constraint firstItem="JJQ-az-A3C" firstAttribute="leading" secondItem="yF6-2G-cQ6" secondAttribute="leading" id="0Tc-NL-moC"/>
+                            <constraint firstAttribute="centerX" secondItem="e41-W5-lfn" secondAttribute="centerX" constant="-72" id="1hD-wp-M7K"/>
+                            <constraint firstItem="JJQ-az-A3C" firstAttribute="baseline" secondItem="L6W-qm-R55" secondAttribute="baseline" id="3oR-h7-Azb"/>
+                            <constraint firstItem="Xt8-QI-7WY" firstAttribute="leading" secondItem="T7e-Fq-Sll" secondAttribute="leading" id="8lw-BD-X9q"/>
+                            <constraint firstItem="Xt8-QI-7WY" firstAttribute="top" secondItem="Gsq-j5-dRu" secondAttribute="top" constant="162" id="COo-1G-kr9"/>
+                            <constraint firstAttribute="centerX" secondItem="L6W-qm-R55" secondAttribute="centerX" constant="88" id="Dg8-GT-FKo"/>
+                            <constraint firstItem="Xt8-QI-7WY" firstAttribute="top" secondItem="T7e-Fq-Sll" secondAttribute="bottom" constant="8" symbolic="YES" id="GoK-8g-Vuz"/>
+                            <constraint firstAttribute="centerX" secondItem="zjv-5h-r2j" secondAttribute="centerX" id="IyZ-OW-wNn"/>
+                            <constraint firstAttribute="centerX" secondItem="cTC-bj-OhZ" secondAttribute="centerX" constant="-72" id="KhC-JC-Ktp"/>
+                            <constraint firstItem="xgw-54-jIf" firstAttribute="top" secondItem="zjv-5h-r2j" secondAttribute="bottom" constant="72" id="Kk6-Vf-Dty"/>
+                            <constraint firstItem="Xt8-QI-7WY" firstAttribute="baseline" secondItem="cTC-bj-OhZ" secondAttribute="baseline" id="LJH-4O-dEk"/>
+                            <constraint firstItem="Xt8-QI-7WY" firstAttribute="top" secondItem="yF6-2G-cQ6" secondAttribute="bottom" constant="8" symbolic="YES" id="PjI-cK-H89"/>
+                            <constraint firstAttribute="centerX" secondItem="JJQ-az-A3C" secondAttribute="centerX" constant="12" id="SeQ-S0-fOP"/>
+                            <constraint firstItem="ibT-67-UL7" firstAttribute="baseline" secondItem="B7S-ll-X5b" secondAttribute="baseline" id="Sq0-Du-eN2"/>
+                            <constraint firstAttribute="centerX" secondItem="T7e-Fq-Sll" secondAttribute="centerX" constant="90" id="Veg-fd-vWu"/>
+                            <constraint firstAttribute="centerX" secondItem="ibT-67-UL7" secondAttribute="centerX" constant="85" id="Y5H-Sx-GkL"/>
+                            <constraint firstAttribute="centerX" secondItem="B7S-ll-X5b" secondAttribute="centerX" constant="-16" id="YbW-oa-1PW"/>
+                            <constraint firstItem="JJQ-az-A3C" firstAttribute="baseline" secondItem="e41-W5-lfn" secondAttribute="baseline" id="e90-i1-8HH"/>
+                            <constraint firstAttribute="centerX" secondItem="Xt8-QI-7WY" secondAttribute="centerX" constant="52" id="gLn-cH-9kd"/>
+                            <constraint firstItem="T7e-Fq-Sll" firstAttribute="top" secondItem="ibT-67-UL7" secondAttribute="bottom" constant="8" symbolic="YES" id="gNB-Bw-tNt"/>
+                            <constraint firstItem="ibT-67-UL7" firstAttribute="top" secondItem="L6W-qm-R55" secondAttribute="bottom" constant="8" symbolic="YES" id="ohy-7c-kB2"/>
+                            <constraint firstItem="cTC-bj-OhZ" firstAttribute="leading" secondItem="Xt8-QI-7WY" secondAttribute="trailing" constant="43" id="oqO-XM-zb1"/>
+                            <constraint firstItem="zjv-5h-r2j" firstAttribute="top" secondItem="Xt8-QI-7WY" secondAttribute="bottom" constant="8" symbolic="YES" id="zBM-XS-KwT"/>
+                            <constraint firstAttribute="centerX" secondItem="yF6-2G-cQ6" secondAttribute="centerX" constant="-11" id="zwC-kj-IJS"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Read Data" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Read Data" image="second" id="G1T-nY-zvD"/>
                     <connections>
-                        <outlet property="tvMsg" destination="WQb-kH-ZQo" id="JmP-85-v69"/>
+                        <outlet property="tvMsg" destination="zjv-5h-r2j" id="4Jz-xe-1oN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htV-Pd-GwT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="825" y="236"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
+        <scene sceneID="nN3-18-WE8">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="J4N-A1-fuA" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DsW-8E-fV1">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Joe-Ve-f6N" kind="relationship" relationship="viewControllers" id="86t-ip-8gB"/>
+                        <segue destination="VQJ-09-fJG" kind="relationship" relationship="viewControllers" id="vke-Co-Y7H"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YfF-FL-SQi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-529" y="-97"/>
         </scene>
     </scenes>
     <resources>
