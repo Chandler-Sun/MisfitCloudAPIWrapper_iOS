@@ -11,4 +11,4 @@
 #import "MFCError.h"
 
 
-#define MISFIT_CLOUD_SDK_V2_VERSION_STRING @"0.5.2-release"
+#define MISFIT_CLOUD_SDK_V2_VERSION_STRING @"0.5.3-release"
