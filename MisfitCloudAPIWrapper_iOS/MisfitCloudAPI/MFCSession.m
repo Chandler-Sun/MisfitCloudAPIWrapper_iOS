@@ -31,12 +31,6 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
 
 @interface MFCSession ()
 
-@property (nonatomic, copy) NSString* appId;
-
-@property (nonatomic, copy) NSString* appSecret;
-
-@property (nonatomic, copy) NSString* token;
-
 @property (nonatomic, readwrite) BOOL isConnected;
 
 @property (nonatomic, strong) MFCCompletion connectCompletion;
@@ -54,17 +48,44 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
         _sharedInstance.appId = [[NSUserDefaults standardUserDefaults] valueForKey:kMisfitAppID];
         _sharedInstance.appSecret = [[NSUserDefaults standardUserDefaults] valueForKey:kMisfitAppSecret];
         _sharedInstance.token = [[NSUserDefaults standardUserDefaults] valueForKey:kMisfitCloudAPIToken];
-        if (_sharedInstance.token) {
-            _sharedInstance.isConnected = YES;
-            [[MFCAPIClient sharedClient] setDefaultHeader:@"Authorization"
-                                                withValue:[NSString stringWithFormat:@"Bearer %@", _sharedInstance.token]];
-            [[MFCAPIClient sharedClient] setDefaultHeader:@"Content-Type"
-                                                withValue:@"application/json"];
-        }
     });
     return _sharedInstance;
 }
 
+- (void) setToken:(NSString *) token
+{
+    //TODO: check parameters here.
+    
+    _token = token;
+   
+    if(token){
+        _isConnected = YES;
+    }else{
+        _isConnected = NO;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.token forKey:kMisfitCloudAPIToken];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [[MFCAPIClient sharedClient] setDefaultHeader:@"Authorization"
+                                        withValue:[NSString stringWithFormat:@"Bearer %@", token]];
+    
+    [[MFCAPIClient sharedClient] setDefaultHeader:@"Content-Type"
+                                        withValue:@"application/json"];
+}
+
+- (void) setAppId:(NSString *)appId
+{
+    _appId  = appId;
+    [[NSUserDefaults standardUserDefaults] setValue:self.appId forKey:kMisfitAppID];
+}
+
+- (void) setAppSecret:(NSString *)appSecret
+{
+    _appSecret  = appSecret;
+    [[NSUserDefaults standardUserDefaults] setValue:self.appSecret forKey:kMisfitAppSecret];
+}
 
 -(void) connectWithAppId:(NSString *) appId
                appSecret:(NSString *) appSecret
@@ -116,6 +137,8 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
                                                                  [self reset];
                                                                  completion(nil,error);
                                                              }];
+    }else{
+        completion(nil,[MFCError businessErrorForbidden]);
     }
 }
 
@@ -124,6 +147,7 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     self.isConnected = NO;
     self.appId = nil;
     self.appSecret = nil;
+    self.token = nil;
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppID];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppSecret];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitCloudAPIToken];
@@ -154,7 +178,6 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
     self.token = token;
     self.isConnected = YES;
     
-    [[NSUserDefaults standardUserDefaults] setValue:self.appId forKey:kMisfitAppID];
     [[NSUserDefaults standardUserDefaults] setValue:self.appSecret forKey:kMisfitAppSecret];
     [[NSUserDefaults standardUserDefaults] setObject:self.token forKey:kMisfitCloudAPIToken];
     
@@ -176,6 +199,9 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
 
 - (BOOL) canHandleOpenUrl:(NSURL *) url
 {
+    if(!self.appId){
+        return NO;
+    }
     NSString * redirectBackFromMisfitAppSchema = [[NSString stringWithFormat:@"mfc-%@", self.appId] lowercaseString];
     return [[url.scheme lowercaseString] isEqualToString:redirectBackFromMisfitAppSchema];
 }

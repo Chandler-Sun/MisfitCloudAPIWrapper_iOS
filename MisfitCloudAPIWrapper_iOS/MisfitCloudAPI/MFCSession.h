@@ -21,6 +21,13 @@ typedef enum {
 
 @property (nonatomic, readonly) BOOL isConnected;
 
+@property (nonatomic, copy) NSString* token;
+
+@property (nonatomic, copy) NSString* appId;
+
+@property (nonatomic, copy) NSString* appSecret;
+
+
 + (MFCSession *) sharedInstance;
 
 - (BOOL) handleOpenURL:(NSURL *) url;
