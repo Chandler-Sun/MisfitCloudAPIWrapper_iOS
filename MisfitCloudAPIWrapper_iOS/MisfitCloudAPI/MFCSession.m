@@ -145,11 +145,11 @@ static NSString * const kMisfitAppSecret = @"__misfit_cloud_app_secret";
 - (void) reset
 {
     self.isConnected = NO;
-    self.appId = nil;
-    self.appSecret = nil;
+    //self.appId = nil;
+    //self.appSecret = nil;
     self.token = nil;
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppID];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppSecret];
+    //[[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppID];
+    //[[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitAppSecret];
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:kMisfitCloudAPIToken];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }

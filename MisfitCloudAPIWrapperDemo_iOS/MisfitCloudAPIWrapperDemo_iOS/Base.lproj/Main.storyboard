@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J4N-A1-fuA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J4N-A1-fuA">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Connect-->
@@ -19,6 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ovP-C4-2dZ">
                                 <rect key="frame" x="240" y="399" width="118" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Connect to Misfit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -28,6 +29,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-aD-9DJ">
                                 <rect key="frame" x="221" y="448" width="155" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="ZVh-RY-YDF"/>
                                 </constraints>
@@ -40,6 +42,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="log" translatesAutoresizingMaskIntoConstraints="NO" id="DM0-9V-L5e">
                                 <rect key="frame" x="184" y="90" width="232" height="279"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="232" id="cV1-4e-5z7"/>
@@ -48,12 +51,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RX6-ai-hUC">
+                                <rect key="frame" x="276" y="345" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="onConnectTapped:" destination="Joe-Ve-f6N" eventType="valueChanged" id="7d4-oa-x2u"/>
+                                </connections>
+                            </switch>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DM0-9V-L5e" firstAttribute="top" secondItem="qaP-aZ-G9J" secondAttribute="bottom" constant="70" id="9lF-my-bRP"/>
                             <constraint firstItem="ovP-C4-2dZ" firstAttribute="top" secondItem="DM0-9V-L5e" secondAttribute="bottom" constant="30" id="D59-48-P8t"/>
                             <constraint firstItem="5dh-aD-9DJ" firstAttribute="top" secondItem="ovP-C4-2dZ" secondAttribute="bottom" constant="19" id="Ixa-iO-i0k"/>
+                            <constraint firstAttribute="centerX" secondItem="RX6-ai-hUC" secondAttribute="centerX" id="Ks8-2g-1W1"/>
                             <constraint firstAttribute="centerX" secondItem="ovP-C4-2dZ" secondAttribute="centerX" constant="1" id="RML-WE-x56"/>
                             <constraint firstAttribute="centerX" secondItem="DM0-9V-L5e" secondAttribute="centerX" id="dBq-qN-nzX"/>
                             <constraint firstAttribute="centerX" secondItem="5dh-aD-9DJ" secondAttribute="centerX" constant="2" id="fj5-wW-kZb"/>
@@ -63,6 +75,7 @@
                     <connections>
                         <outlet property="btnConnectToMisfit" destination="ovP-C4-2dZ" id="uhv-6h-fQa"/>
                         <outlet property="btnDisconnectFromMisfit" destination="5dh-aD-9DJ" id="c9J-N4-gCK"/>
+                        <outlet property="theSwitch" destination="RX6-ai-hUC" id="av5-No-wxM"/>
                         <outlet property="tvMessage" destination="DM0-9V-L5e" id="5FD-dY-Dd5"/>
                     </connections>
                 </viewController>
@@ -84,6 +97,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-qm-R55">
                                 <rect key="frame" x="190" y="48" width="44" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Profile">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -93,6 +107,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJQ-az-A3C">
                                 <rect key="frame" x="256" y="48" width="64" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Statistics">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -102,6 +117,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-67-UL7">
                                 <rect key="frame" x="190" y="86" width="51" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Activity">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -111,6 +127,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-ll-X5b">
                                 <rect key="frame" x="256" y="86" width="120" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Activity Summary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -120,6 +137,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e41-W5-lfn">
                                 <rect key="frame" x="343" y="48" width="57" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,6 +147,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7e-Fq-Sll">
                                 <rect key="frame" x="190" y="124" width="39" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Sleep">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -138,6 +157,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yF6-2G-cQ6">
                                 <rect key="frame" x="256" y="124" width="109" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Sleep Summary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -147,6 +167,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Data" translatesAutoresizingMaskIntoConstraints="NO" id="zjv-5h-r2j">
                                 <rect key="frame" x="184" y="200" width="232" height="279"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="232" id="7U9-ub-Uwg"/>
@@ -156,6 +177,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTC-bj-OhZ">
                                 <rect key="frame" x="350" y="162" width="43" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Graph">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -165,6 +187,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt8-QI-7WY">
                                 <rect key="frame" x="190" y="162" width="117" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Weight Summary">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -173,6 +196,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JJQ-az-A3C" firstAttribute="leading" secondItem="yF6-2G-cQ6" secondAttribute="leading" id="0Tc-NL-moC"/>
@@ -218,6 +242,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DsW-8E-fV1">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>

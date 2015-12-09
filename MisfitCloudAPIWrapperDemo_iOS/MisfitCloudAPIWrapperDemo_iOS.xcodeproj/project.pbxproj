@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C2DD94F1BE07A7D00CD17D9 /* MisfitCloudAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */; };
 		2C82C9F91BDE186600A02B9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C82C9F71BDE186600A02B9F /* LaunchScreen.xib */; };
 		2C837B3B1B79E509007C579A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3A1B79E509007C579A /* main.m */; };
 		2C837B3E1B79E509007C579A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B3D1B79E509007C579A /* AppDelegate.m */; };
@@ -15,6 +14,7 @@
 		2C837B441B79E509007C579A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C837B431B79E509007C579A /* SecondViewController.m */; };
 		2C837B471B79E509007C579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B451B79E509007C579A /* Main.storyboard */; };
 		2C837B491B79E509007C579A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C837B481B79E509007C579A /* Images.xcassets */; };
+		2CE1CE561BF1D23700CA09BF /* libMisfitCloudAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE1CE551BF1D23700CA09BF /* libMisfitCloudAPI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +31,7 @@
 		2C837B461B79E509007C579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C837B481B79E509007C579A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MisfitCloudAPI.framework; path = ../RELEASE/MisfitCloudAPI.framework; sourceTree = SOURCE_ROOT; };
+		2CE1CE551BF1D23700CA09BF /* libMisfitCloudAPI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMisfitCloudAPI.a; path = "../../../../Library/Developer/Xcode/DerivedData/MisfitCloudAPI-fpvyohlmwylsrfehlcasyjnmbgfv/Build/Products/Debug-iphoneos/libMisfitCloudAPI.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C2DD94F1BE07A7D00CD17D9 /* MisfitCloudAPI.framework in Frameworks */,
+				2CE1CE561BF1D23700CA09BF /* libMisfitCloudAPI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +49,7 @@
 		2C17D4461B8C427300E30C27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1CE551BF1D23700CA09BF /* libMisfitCloudAPI.a */,
 				2C865C171BBA8A1C00BA7478 /* MisfitCloudAPI.framework */,
 			);
 			name = Frameworks;

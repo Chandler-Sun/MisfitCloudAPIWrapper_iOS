@@ -22,6 +22,18 @@
     return self;
 }
 
+- (instancetype)initBusiness
+{
+    self = [super initWithDomain:@"BUSINESS" code:0 userInfo:@{}];
+    if (self) {
+        self.httpErrorCode = 0;
+        self.isBusinessError = NO;
+        self.localizedTitle = MFCLocalizedString(@"Error", nil);
+        self.localizedMessage = MFCLocalizedString(@"Business error.", nil);
+    }
+    return self;
+}
+
 + (instancetype)networkErrorFromError:(NSError *)error
 {
     MFCError *networkError = [[MFCError alloc] init];
@@ -63,7 +75,8 @@
 }
 + (instancetype)businessErrorUserCanceled
 {
-    MFCError *businessError = [[MFCError alloc] init];
+    MFCError *businessError = [[MFCError alloc] initBusiness];
+    businessError.isBusinessError = YES;
     businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
     businessError.localizedMessage = MFCLocalizedString(@"User cancelled the action.", nil);
     return businessError;
@@ -71,7 +84,8 @@
 
 + (instancetype)businessErrorForbidden
 {
-    MFCError *businessError = [[MFCError alloc] init];
+    MFCError *businessError = [[MFCError alloc] initBusiness];
+    businessError.isBusinessError = YES;
     businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
     businessError.localizedMessage = MFCLocalizedString(@"Invalid appId or appSecret not match.", nil);
     return businessError;
@@ -79,7 +93,8 @@
 
 + (instancetype)businessErrorNotAuthorized
 {
-    MFCError *businessError = [[MFCError alloc] init];
+    MFCError *businessError = [[MFCError alloc] initBusiness];
+    businessError.isBusinessError = YES;
     businessError.localizedTitle = MFCLocalizedString(@"Error", nil);
     businessError.localizedMessage = MFCLocalizedString(@"Invalid access token.", nil);
     return businessError;

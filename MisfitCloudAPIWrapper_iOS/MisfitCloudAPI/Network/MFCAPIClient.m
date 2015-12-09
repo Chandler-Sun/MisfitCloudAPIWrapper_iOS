@@ -80,7 +80,11 @@ static MFCAPIClient *_sharedClient = nil;
                if(c.error)
                {
                    NSLog(@"error: %@",c.error);
-                   failure([MFCError networkErrorFromError:c.error]);
+                   if(c.httpResponse.statusCode==403){
+                       failure([MFCError businessErrorNotAuthorized]);
+                   }else{
+                       failure([MFCError networkErrorFromError:c.error]);
+                   }
                }
                else
                {
